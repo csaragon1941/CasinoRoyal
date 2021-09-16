@@ -15,7 +15,8 @@ int main() {
 
     std::cout << "Welcome to Project Alpha \n";
     std::cout << "Please log in\n";
-
+    int loggedIn = false;
+while (!loggedIn) {
     std::cout << "Username: ";
     std::cin >> username;
 
@@ -24,13 +25,19 @@ int main() {
 
     if (password == pw, username == un) {
 
-        printf("correct");
-
+        printf("correct\n");
+        loggedIn = true;
 
     } else {
-        printf("wrong");
-
+        printf("Wrong username or password\n");
+        printf("Please try again\n");
     }
+}
+
+
+
+
+
 
     return 0;
 }

@@ -24,13 +24,22 @@ while (!loggedIn) { //loop to check if user has sucessfully logged in and allows
 
     std::cout << "Password: ";
     std::cin >> password;
-
-    if (password == pw[1], username == un[1]) {
+    int x = NumberOfUsers;
+    int i = 0;
+while(x > 0) {
+    if (password == pw[i], username == un[i]) {
 
         printf("correct\n");
         loggedIn = true;
+        x = 0;
 
     } else {
+        i++;
+        x--;
+    }
+
+}
+    if (!loggedIn) {
         printf("Wrong username or password\n");
         printf("Please try again\n");
     }

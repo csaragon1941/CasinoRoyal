@@ -1,29 +1,31 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <stdbool.h>
 
 int main() {
 
-    std::string pw;
-    std::string un;
+
+
     std::string username;
     std::string password;
+    const int NumberOfUsers = 2;
+    const int LengthOfUsernames = 10;
+    const int LengthOfPasswords = 10;
 
-    un = "csaragon";
-    pw = "1941";
+   char un[NumberOfUsers][LengthOfUsernames] = {"csaragon", "zmixson" };
+    char pw[NumberOfUsers][LengthOfPasswords] = {"1941", "2001" };
 
     std::cout << "Welcome to Project Alpha \n";
     std::cout << "Please log in\n";
-    int loggedIn = false;
-while (!loggedIn) {
+    bool loggedIn = false;
+while (!loggedIn) { //loop to check if user has sucessfully logged in and allows them to keep trying to log in
     std::cout << "Username: ";
     std::cin >> username;
 
     std::cout << "Password: ";
     std::cin >> password;
 
-    if (password == pw, username == un) {
+    if (password == pw[1], username == un[1]) {
 
         printf("correct\n");
         loggedIn = true;
@@ -33,11 +35,6 @@ while (!loggedIn) {
         printf("Please try again\n");
     }
 }
-
-
-
-
-
 
     return 0;
 }
